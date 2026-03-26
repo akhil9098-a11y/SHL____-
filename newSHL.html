@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SHL Test Complete</title>
+
+<style>
+body{
+margin:0;
+font-family:"Segoe UI", Arial, sans-serif;
+background:#eeeeee;
+}
+
+/* Top bar */
+.topbar{
+height:52px;
+background:#e8e8e8;
+border-bottom:1px solid #d6d6d6;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 18px;
+}
+
+.logo{
+font-weight:600;
+color:#6a6a6a;
+font-size:18px;
+}
+
+/* icon container */
+.icons{
+display:flex;
+gap:16px;
+align-items:center;
+}
+
+/* icon style */
+.icon{
+width:18px;
+height:18px;
+stroke:#777;
+stroke-width:2;
+fill:none;
+cursor:pointer;
+}
+
+/* container near top center */
+.container{
+width:100%;
+display:flex;
+justify-content:center;
+margin-top:20px; /* controls distance from top */
+}
+
+/* message box */
+.message{
+width:90%;
+max-width:420px;
+padding:12px 20px;
+background:#f7f7f7;
+border:1px solid #dddddd;
+border-radius:10px;
+font-size:14px;
+font-weight:600;
+color:#444;
+text-align:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+
+<div class="logo">SHL</div>
+
+<div class="icons">
+
+<!-- Fullscreen icon -->
+<svg id="fullscreenBtn" class="icon" viewBox="0 0 24 24">
+<polyline points="15 3 21 3 21 9"></polyline>
+<polyline points="9 21 3 21 3 15"></polyline>
+<polyline points="21 15 21 21 15 21"></polyline>
+<polyline points="3 9 3 3 9 3"></polyline>
+</svg>
+
+<!-- Menu icon -->
+<svg class="icon" viewBox="0 0 24 24">
+<line x1="3" y1="6" x2="21" y2="6"></line>
+<line x1="3" y1="12" x2="21" y2="12"></line>
+<line x1="3" y1="18" x2="21" y2="18"></line>
+</svg>
+
+</div>
+
+</div>
+
+<div class="container">
+<div class="message">
+Your test is now complete. Thank you!
+</div>
+</div>
+
+<script>
+// Fullscreen toggle
+const fullscreenBtn = document.getElementById("fullscreenBtn");
+
+fullscreenBtn.addEventListener("click", () => {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        document.exitFullscreen();
+    }
+});
+</script>
+
+</body>
+</html>
